@@ -1,8 +1,7 @@
 pipeline {
   agent any
   tools { maven 'maven-3.9' }   // configure in Manage Jenkins > Tools (auto-install)
-  triggers { githubPush() }
-  stages {
+  stages {   //triggers { githubPush() }
     stage('Checkout') {
       steps { checkout scm }
     }
