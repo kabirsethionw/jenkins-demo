@@ -10,4 +10,9 @@ class DemoApplicationTest {
     void helloReturnsMessage() {
         assertEquals("Hello from Jenkins demo - build v1", new DemoApplication().hello());
     }
+
+    @Test
+    void checkSecretMessage() {
+        assertEquals("Secret length: top-secret", new DemoApplication().secretCheck());
+    }
 }
